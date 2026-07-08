@@ -1,0 +1,19 @@
+{
+  "name": "quiz-realtime-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MVP веб-приложения для проведения квизов в реальном времени.",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "start": "npm run start -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
